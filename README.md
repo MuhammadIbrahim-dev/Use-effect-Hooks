@@ -3,7 +3,25 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+```
+export default function EffectHooks() {
+    let [Count,SetCount]=useState(1)
 
+    let changeCounter=()=>{
+        SetCount(Count+1)
+    }
+    useEffect(()=>{
+    console.log("ibrahim",Count)
+    },[Count])
+  return (
+    <div className='ml-[10%]'>        
+        <button onClick={changeCounter}>counts</button>
+        {Count}
+    </div>
+  )
+}
+
+```
 In the project directory, you can run:
 
 ### `npm start`
